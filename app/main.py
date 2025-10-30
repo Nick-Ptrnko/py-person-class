@@ -1,6 +1,7 @@
 class Person:
     people = {}
-    def __init__(self, name, age):
+
+    def __init__(self, name: str, age: int) -> None:
         self.name = name
         self.age = age
         # Додаємо екземпляр до атрибута класу people
@@ -33,10 +34,3 @@ def create_person_list(people_dicts: list) -> list:
             current_person_object.husband = Person.people[husband_name]
 
     return person_list
-people = [
-    {"name": "Ross", "age": 30, "wife": "Rachel"},
-    {"name": "Joey", "age": 29, "wife": None},
-    {"name": "Rachel", "age": 28, "husband": "Ross"}
-]
-person_list_1 = create_person_list(people)
-print(person_list_1)
